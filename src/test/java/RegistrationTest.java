@@ -25,8 +25,8 @@ public class RegistrationTest {
 
     @Test
     public void Test() throws AWTException {
-        formsSteps.formsClick();
-        formsSteps.practiceFormClick();
+        formsSteps.formsClick()
+                .practiceFormClick();
 
 
         registrationSteps.setFirstName()

@@ -1,18 +1,27 @@
 package withoutPageFactory.steps;
 
 
+import io.qameta.allure.Step;
 import withoutPageFactory.pages.MainSelenidePage;
 
 public class MainSelenideSteps {
     MainSelenidePage mainPage = new MainSelenidePage();
 
-    public void hovering(){
+    @Step
+    public MainSelenideSteps hovering() {
         mainPage.cookie.hover();
+        return this;
     }
-    public void clickCookie(){
+
+    @Step
+    public MainSelenideSteps clickCookie() {
         mainPage.acceptCookie.click();
+        return this;
     }
-    public void clickMovies(){
+
+    @Step
+    public MainSelenideSteps clickMovies() {
         mainPage.movie.click();
+        return this;
     }
 }

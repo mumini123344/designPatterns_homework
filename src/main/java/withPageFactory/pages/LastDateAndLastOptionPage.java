@@ -3,6 +3,7 @@ package withPageFactory.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
@@ -23,8 +24,10 @@ public class LastDateAndLastOptionPage {
     @FindBy(xpath = "//div[contains(@class,'ui-tabs-panel')][@aria-expanded='true']/div/ul/li[last()]")
     WebElement lastDay;
 
-    @FindBy(xpath = "//body[1]/section[1]/div[2]/div[1]/div[2]/div[1]/div[15]/a[1]")
+    @FindBy(xpath = "//div[contains(@class,'ui-tabs-panel')][@aria-expanded='true']/div/div[@aria-hidden = 'false'][last()]")
     WebElement lastOption;
+
+
 
     public LastDateAndLastOptionPage compareMovieNames() {
         nameOfMovie = movieNameOnPage.getText();

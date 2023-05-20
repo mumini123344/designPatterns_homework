@@ -1,16 +1,21 @@
 package withoutPageFactory.steps;
 
 
+import io.qameta.allure.Step;
 import withoutPageFactory.pages.MovieSelenidePage;
 
 public class MovieSelenIdeSteps {
     MovieSelenidePage movieSelenidePage = new MovieSelenidePage();
 
-    public void HoverFirstMovie(){
+    @Step
+    public MovieSelenIdeSteps HoverFirstMovie(){
         movieSelenidePage.firstMovieSelenide.hover();
+        return this;
     }
-    public void clickFirstMovie(){
+    @Step
+    public MovieSelenIdeSteps clickFirstMovie(){
         movieSelenidePage.buyButton.click();
+        return this;
     }
 
 

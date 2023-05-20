@@ -18,7 +18,7 @@ public class RegistrationTest {
 
 
     @BeforeTest
-    public void setUp(){
+    public void setUp() {
         open("https://demoqa.com/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
@@ -43,7 +43,6 @@ public class RegistrationTest {
         }
 
         submitSteps.clickSubmit();
-
 
 
     }

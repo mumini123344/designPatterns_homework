@@ -1,16 +1,21 @@
 package steps;
 
+import io.qameta.allure.Step;
 import pages.FormsPage;
 
 public class FormsSteps {
     FormsPage formsPage = new FormsPage();
 
-    public void formsClick(){
+    @Step
+    public FormsSteps formsClick(){
         formsPage.forms.click();
+        return this;
 
     }
-    public void practiceFormClick(){
+    @Step
+    public FormsSteps practiceFormClick(){
         formsPage.practiceForm.click();
+        return this;
     }
 
 }

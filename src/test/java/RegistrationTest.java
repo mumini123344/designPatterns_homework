@@ -18,15 +18,15 @@ public class RegistrationTest {
 
 
     @BeforeTest
-    public void setUp(){
+    public void setUp() {
         open("https://demoqa.com/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
     @Test
     public void Test() throws AWTException {
-        formsSteps.formsClick();
-        formsSteps.practiceFormClick();
+        formsSteps.formsClick()
+                .practiceFormClick();
 
 
         registrationSteps.setFirstName()
@@ -43,7 +43,6 @@ public class RegistrationTest {
         }
 
         submitSteps.clickSubmit();
-
 
 
     }

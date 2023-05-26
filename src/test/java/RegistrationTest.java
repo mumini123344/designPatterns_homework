@@ -17,6 +17,7 @@ public class RegistrationTest {
     SubmitSteps submitSteps = new SubmitSteps();
 
 
+
     @BeforeTest
     public void setUp() {
         open("https://demoqa.com/");
@@ -34,13 +35,14 @@ public class RegistrationTest {
                 .setGender()
                 .setMobileNumber();
 
+        // ro vushveb lagavs kvelaferi mere
 
-        Robot robot = new Robot();
-        for (int i = 0; i < 4; i++) {
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_SUBTRACT);
-        }
+//        Robot robot = new Robot();
+//        for (int i = 0; i < 4; i++) {
+//            robot.keyPress(KeyEvent.VK_CONTROL);
+//            robot.keyPress(KeyEvent.VK_SUBTRACT);
+//            robot.keyRelease(KeyEvent.VK_SUBTRACT);
+//        }
 
         submitSteps.clickSubmit();
 

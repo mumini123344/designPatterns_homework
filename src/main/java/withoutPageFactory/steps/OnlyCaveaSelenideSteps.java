@@ -4,6 +4,8 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 import withoutPageFactory.pages.OnlyCaveaSelenidePage;
 
+import static com.codeborne.selenide.Selenide.$;
+
 public class OnlyCaveaSelenideSteps {
     public String nameOfTheMovie;
 
@@ -29,6 +31,7 @@ public class OnlyCaveaSelenideSteps {
     @Step
     public OnlyCaveaSelenideSteps selectingTheLastOption(){
         onlyCaveaSelenidePage.lastOption.click();
+//        $(".footer.container").scrollIntoView(true);
         return this;
     }
     @Step

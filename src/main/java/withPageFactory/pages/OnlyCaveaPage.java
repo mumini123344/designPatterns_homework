@@ -1,5 +1,6 @@
 package withPageFactory.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -16,7 +17,7 @@ public class OnlyCaveaPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "ui-id-6")
+    @FindBy(id = "ui-id-5")
     WebElement caveaSelection;
 
     @FindBys({
@@ -25,17 +26,20 @@ public class OnlyCaveaPage {
     })
     WebElement cinemaTitle;
 
+    @Step
     public OnlyCaveaPage selectingCavea() {
         Actions actions = new Actions(driver);
         actions.moveToElement(caveaSelection).perform();
         return this;
     }
 
+    @Step
     public OnlyCaveaPage clickingCavea() {
         caveaSelection.click();
         return this;
     }
 
+    @Step
     public OnlyCaveaPage checkingCaveaOptions() {
         Assert.assertEquals("კავეა ისთ ფოინთი", cinemaTitle.getText());
         return this;

@@ -1,5 +1,6 @@
 package withPageFactory.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,6 +21,7 @@ public class ChoosePopUpVacantPage {
     })
     WebElement freeSeat;
 
+    @Step
     public ChoosePopUpVacantPage selectingFreeSeat() {
         freeSeat.click();
         return this;

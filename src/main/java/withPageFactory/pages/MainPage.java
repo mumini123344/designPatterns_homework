@@ -1,5 +1,6 @@
 package withPageFactory.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,17 +22,20 @@ public class MainPage {
     })
     WebElement cookieBanner;
 
+
     public MainPage(WebDriver driver) {
         this.driver = driver;
         driver.get(PAGE_URL);
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Accepting cookie")
     public MainPage selectCookie() {
         cookieBanner.click();
         return this;
     }
 
+    @Step("Going to movie section")
     public void clickMovie() {
         movies.click();
     }

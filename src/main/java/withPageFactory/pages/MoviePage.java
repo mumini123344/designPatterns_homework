@@ -1,5 +1,6 @@
 package withPageFactory.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,17 +23,20 @@ public class MoviePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step
     public MoviePage hoverMovie() {
         Actions actions = new Actions(driver);
         actions.moveToElement(firstMovie).perform();
         return this;
     }
 
+    @Step("Clicking on first movie")
     public MoviePage clickFirstMovie() {
         buyButton.click();
         return this;
     }
 
+    @Step
     public MoviePage ScrollToObject() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0, 500)");
